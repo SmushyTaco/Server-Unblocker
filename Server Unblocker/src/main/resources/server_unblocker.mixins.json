@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.smushytaco.server_unblocker.mixin",
+  "compatibilityLevel": "JAVA_${java}",
+  "client": [
+    "UnblockServers"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

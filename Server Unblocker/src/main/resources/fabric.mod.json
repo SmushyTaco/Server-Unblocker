@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "server_unblocker",
+  "version": "${version}",
+  "name": "Server Unblocker",
+  "description": "This allows you to connect to blacklisted Minecraft servers.",
+  "authors": [
+    "SmushyTaco"
+  ],
+  "contact": {
+    "homepage": "https://www.smushytaco.com/",
+    "issues": "https://www.curseforge.com/minecraft/mc-mods/server-unblocker/issues/",
+    "sources": "https://github.com/SmushyTaco/Server-Unblocker/"
+  },
+  "license": "GNU Lesser General Public License version 3 (LGPLv3)",
+  "icon": "assets/server_unblocker/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "com.smushytaco.server_unblocker.ServerUnblocker"
+      }
+    ],
+    "preLaunch": [
+      {
+        "adapter": "kotlin",
+        "value": "com.smushytaco.server_unblocker.ServerUnblockerPreLaunch"
+      }
+    ],
+    "modmenu": [
+      "com.smushytaco.server_unblocker.configuration_support.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "server_unblocker.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabricloader}",
+    "fabric-api": ">=${fabric_api}",
+    "fabric-language-kotlin": ">=${fabric_language_kotlin}",
+    "minecraft": ">=${minecraft}",
+    "java": ">=${java}",
+    "cloth-config2": ">=${clothconfig}",
+    "com_github_llamalad7_mixinextras": ">=${mixinextras}"
+  },
+  "suggests": {
+    "modmenu": ">=${modmenu}"
+  }
+}
