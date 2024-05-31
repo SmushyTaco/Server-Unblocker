@@ -9,7 +9,6 @@ import java.util.function.Predicate;
 @Mixin(MojangBlockListSupplier.class)
 public abstract class UnblockServers {
     @ModifyReturnValue(method = "createBlockList", at = @At("RETURN"), remap = false)
-    @SuppressWarnings("unused")
     @Nullable
     private Predicate<String> hookCanAccept(Predicate<String> original) { return ServerUnblocker.INSTANCE.getConfig().getServersAreUnblocked() ? null : original; }
 }
