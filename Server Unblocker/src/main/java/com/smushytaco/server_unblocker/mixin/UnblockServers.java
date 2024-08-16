@@ -10,5 +10,5 @@ import java.util.function.Predicate;
 public abstract class UnblockServers {
     @ModifyReturnValue(method = "createBlockList", at = @At("RETURN"), remap = false)
     @Nullable
-    private Predicate<String> hookCanAccept(Predicate<String> original) { return ServerUnblocker.INSTANCE.getConfig().getServersAreUnblocked() ? null : original; }
+    private Predicate<String> hookCreateBlockList(Predicate<String> original) { return ServerUnblocker.INSTANCE.getConfig().getServersAreUnblocked() ? null : original; }
 }
