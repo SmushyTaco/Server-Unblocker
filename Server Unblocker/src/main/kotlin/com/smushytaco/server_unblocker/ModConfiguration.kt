@@ -5,5 +5,6 @@ import io.wispforest.owo.config.annotation.*
 @Suppress("UNUSED")
 class ModConfiguration {
     @JvmField
+    @RestartRequired
     var serversAreUnblocked = true
 }
