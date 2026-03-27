@@ -21,11 +21,10 @@ repositories {
 }
 dependencies {
     minecraft(libs.minecraft)
-    mappings(loom.officialMojangMappings())
-    modImplementation(libs.loader)
-    modImplementation(libs.fabric.api)
-    modImplementation(libs.fabric.language.kotlin)
-    modImplementation(libs.owo)
+    implementation(libs.loader)
+    implementation(libs.fabric.api)
+    implementation(libs.fabric.language.kotlin)
+    implementation(libs.owo)
     ksp(libs.kspOwoConfig)
 }
 java {
